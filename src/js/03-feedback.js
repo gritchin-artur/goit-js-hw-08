@@ -52,9 +52,17 @@ function formReloadListen(event) {
 
 function formReload(event) {
     event.preventDefault();
-    
-    event.currentTarget.reset();
-    localStorage.removeItem(STARAGE_KEY);
+
+    if (0 === mail.value.length) {
+        alert( "Все поля должны быть заполнены!" );
+    }  if (0 === message.value.length) {
+        alert( "Все поля должны быть заполнены!" );
+    } else {
+         event.currentTarget.reset();
+        localStorage.removeItem(STARAGE_KEY);
+        localStorage.removeItem('');
+    };
+   
 
 };
 
