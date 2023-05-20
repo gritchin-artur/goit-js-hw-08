@@ -51,8 +51,8 @@ function formReloadListen(event) {
 };
 
 function formReload(event) {
-    event.preventDefault();
-    
+    // event.preventDefault();
+
 
     if (0 === mail.value.length) {
         alert( "Все поля должны быть заполнены!" );
@@ -61,7 +61,6 @@ function formReload(event) {
     } else {
          event.currentTarget.reset();
         localStorage.removeItem(STARAGE_KEY);
-        localStorage.removeItem('');
     };
    
 
