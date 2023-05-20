@@ -52,6 +52,7 @@ function formReloadListen(event) {
 
 function formReload(event) {
     event.preventDefault();
+    
 
     if (0 === mail.value.length) {
         alert( "Все поля должны быть заполнены!" );
