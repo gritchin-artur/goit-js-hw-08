@@ -66,9 +66,12 @@ function formReload(event) {
 
 function popularTextarea() {
            const saveMessage = JSON.parse(localStorage.getItem(STARAGE_KEY));
-    if (saveMessage) {
+      if (saveMessage) {
+         if (saveMessage.email) {
         mail.value = saveMessage.email;
-    message.value = saveMessage.message;
+    } if (saveMessage.message) {
+        message.value = saveMessage.message;
+    }
     }
 };
 
